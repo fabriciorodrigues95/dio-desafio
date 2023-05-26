@@ -14,12 +14,15 @@ function classificarImc(imc){
         return ('Obesidade grave');
     }
 }
-function main (){
+(function /* main -> Não preciso do nome -> chamado função não nomeada, mas só vai funcionar internamente, e não global */ (){
     const peso = 75;
     const altura = 1.75;
     const imc = calcularImc(peso, altura);
     console.log(imc);
     console.log(classificarImc(imc));
-}
+}) ();
 
-main();
+// main(); --> Não precisso chamar ela por ter invocado ();
+
+// Exemplo
+// main ();->> Aqui vai da erro porque só funciona dentro dos () esta função por ser sem nome;
